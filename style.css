@@ -1,0 +1,245 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #10152f;
+  --panel: #202747;
+  --purple: #7257ff;
+  --yellow: #ffd447;
+  --teal: #42e0c1;
+  --pink: #ff7096;
+  --white: #ffffff;
+  --muted: #c9cce1;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--white);
+  line-height: 1.7;
+}
+
+header {
+  background: #171e3d;
+  padding: 18px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-bottom: 1px solid #ffffff25;
+}
+
+.logo {
+  font-weight: 900;
+  color: var(--yellow);
+  font-size: 1.15rem;
+}
+
+nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: .9rem;
+}
+
+nav a:hover, nav a.active {
+  background: var(--purple);
+}
+
+main {
+  width: min(1100px, 90%);
+  margin: auto;
+  min-height: 75vh;
+}
+
+.hero {
+  padding: 80px 0 65px;
+  animation: appear .65s ease;
+}
+
+.page-content {
+  padding: 55px 0;
+  animation: appear .5s ease;
+}
+
+.tag {
+  color: var(--yellow);
+  font-size: .85rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 7vw, 4.8rem);
+  line-height: 1.1;
+  margin: 18px 0;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.2;
+  margin: 12px 0 18px;
+}
+
+h3 { margin-bottom: 12px; }
+
+p { margin: 10px 0; }
+
+.highlight { color: var(--yellow); }
+
+.intro {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 25px 0;
+}
+
+.grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid #ffffff20;
+  padding: 24px;
+  border-radius: 20px;
+  transition: transform .2s, border-color .2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--teal);
+}
+
+.emoji { font-size: 2.2rem; }
+
+.card p, .muted { color: var(--muted); }
+
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  margin: 7px 5px 7px 0;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+  transition: transform .2s;
+  font-size: 1rem;
+}
+
+.btn:hover { transform: translateY(-3px); }
+
+.primary {
+  background: var(--yellow);
+  color: var(--bg);
+}
+
+.secondary {
+  border: 1px solid #ffffff60;
+  color: white;
+  background: transparent;
+}
+
+.option {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  background: #ffffff08;
+  border: 1px solid #ffffff35;
+  border-radius: 12px;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.option:hover:not(:disabled) {
+  border-color: var(--yellow);
+}
+
+.option.correct {
+  background: #42e0c125;
+  border-color: var(--teal);
+}
+
+.option.wrong {
+  background: #ff709625;
+  border-color: var(--pink);
+}
+
+.option:disabled { cursor: default; }
+
+.notice {
+  background: #42e0c115;
+  border-left: 4px solid var(--teal);
+  border-radius: 0 12px 12px 0;
+  padding: 17px;
+  margin: 22px 0;
+}
+
+.stat {
+  font-size: 2rem;
+  color: var(--yellow);
+  font-weight: 900;
+}
+
+.small {
+  color: var(--muted);
+  font-size: .85rem;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  border-radius: 10px;
+  border: 1px solid #ffffff40;
+  background: #10152f;
+  color: white;
+  font: inherit;
+  margin: 10px 0 18px;
+}
+
+footer {
+  background: #0b1026;
+  text-align: center;
+  padding: 28px 6%;
+  color: var(--muted);
+  margin-top: 40px;
+}
+
+footer a { color: var(--teal); }
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 720px) {
+  header { align-items: flex-start; flex-direction: column; }
+  .grid, .grid.two { grid-template-columns: 1fr; }
+  .hero { padding-top: 55px; }
+}
