@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cabaran Digital</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">🇲🇾 MISI DIGITAL</div>
+  <nav>
+    <a href="index.html">Utama</a>
+    <a href="kesan.html">Kesan Teknologi</a>
+    <a class="active" href="cabaran.html">Cabaran</a>
+    <a href="kuiz.html">Kuiz</a>
+    <a href="undian.html">Undian</a>
+  </nav>
+</header>
+
+<main class="page-content">
+  <span class="tag">MISI 02 • CABARAN DIGITAL</span>
+  <h1>Anda <span class="highlight">Wira Digital?</span></h1>
+  <p class="intro">Pilih tindakan yang paling bertanggungjawab untuk situasi di bawah.</p>
+
+  <div class="card">
+    <div class="emoji">📱</div>
+    <h2>Situasi: Mesej tular</h2>
+    <p>
+      Anda menerima mesej dalam kumpulan kelas yang membuat dakwaan sensitif
+      tentang satu komuniti. Mesej tersebut tidak mempunyai sumber yang jelas.
+    </p>
+    <h3>Apakah tindakan terbaik?</h3>
+
+    <button class="option" onclick="caseAnswer(1)">A. Sebarkan mesej supaya lebih ramai orang tahu.</button>
+    <button class="option" onclick="caseAnswer(2)">B. Semak sumber, tarikh dan bukti terlebih dahulu.</button>
+    <button class="option" onclick="caseAnswer(3)">C. Tulis komen yang menyalahkan seluruh komuniti.</button>
+
+    <p id="caseResult" aria-live="polite"></p>
+  </div>
+
+  <div class="grid two">
+    <article class="card">
+      <div class="emoji">🔐</div>
+      <h3>Jaga privasi</h3>
+      <p>Jangan menyebarkan maklumat peribadi atau foto seseorang tanpa kebenaran.</p>
+    </article>
+    <article class="card">
+      <div class="emoji">🫶</div>
+      <h3>Jaga maruah</h3>
+      <p>Berbeza pendapat secara sopan dan jangan menghina identiti orang lain.</p>
+    </article>
+  </div>
+
+  <a class="btn secondary" href="kesan.html">← Halaman sebelumnya</a>
+  <a class="btn primary" href="kuiz.html">Uji kefahaman →</a>
+</main>
+
+<footer>MISI DIGITAL MALAYSIA | KPPB</footer>
+
+<script>
+function caseAnswer(choice) {
+  const result = document.getElementById("caseResult");
+
+  if (choice === 2) {
+    result.innerHTML = "<strong style='color:var(--teal)'>✅ Betul!</strong> Semak maklumat sebelum berkongsi dan elakkan membuat tuduhan tanpa bukti.";
+  } else {
+    result.innerHTML = "<strong style='color:var(--pink)'>Cuba lagi.</strong> Menyebarkan dakwaan yang belum disahkan boleh menyebabkan salah faham dan menjejaskan keharmonian.";
+  }
+}
+</script>
+</body>
+</html>
