@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kuiz Wira Digital</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">🇲🇾 MISI DIGITAL</div>
+  <nav>
+    <a href="index.html">Utama</a>
+    <a href="kesan.html">Kesan Teknologi</a>
+    <a href="cabaran.html">Cabaran</a>
+    <a class="active" href="kuiz.html">Kuiz</a>
+    <a href="undian.html">Undian</a>
+  </nav>
+</header>
+
+<main class="page-content">
+  <span class="tag">MISI 03 • UJI MINDA</span>
+  <h1>Kuiz <span class="highlight">Wira Digital</span> 🧠</h1>
+  <p class="intro">Jawab lima soalan. Setiap jawapan betul mendapat satu markah.</p>
+
+  <div class="card">
+    <div style="height:8px;background:#ffffff20;border-radius:10px;overflow:hidden">
+      <div id="progress" style="height:100%;width:0;background:var(--teal);transition:width .3s"></div>
+    </div>
+    <p id="count" class="small">Soalan 1 daripada 5</p>
+    <h2 id="question">Soalan akan dipaparkan di sini.</h2>
+    <div id="options"></div>
+    <p id="feedback" aria-live="polite"></p>
+    <button class="btn primary" id="next" onclick="nextQuestion()" disabled>Soalan seterusnya →</button>
+    <div id="result"></div>
+  </div>
+
+  <a class="btn secondary" href="cabaran.html">← Kembali ke cabaran</a>
+  <a class="btn primary" href="undian.html">Ke undian audiens →</a>
+</main>
+
+<footer>MISI DIGITAL MALAYSIA | KPPB</footer>
+<script src="script.js"></script>
+</body>
+</html>
