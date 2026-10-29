@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suara Audiens</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">🇲🇾 MISI DIGITAL</div>
+  <nav>
+    <a href="index.html">Utama</a>
+    <a href="kesan.html">Kesan Teknologi</a>
+    <a href="cabaran.html">Cabaran</a>
+    <a href="kuiz.html">Kuiz</a>
+    <a class="active" href="undian.html">Undian</a>
+  </nav>
+</header>
+
+<main class="page-content">
+  <span class="tag">MISI 04 • SUARA AUDIENS</span>
+  <h1>Pendapat <span class="highlight">Anda!</span> 🗳️</h1>
+  <p class="intro">Pilih satu tindakan yang paling berkesan untuk mengukuhkan perpaduan melalui teknologi.</p>
+
+  <div class="card">
+    <button class="option vote-option" onclick="selectVote(this,'Pendidikan literasi digital')">📚 Pendidikan literasi digital</button>
+    <button class="option vote-option" onclick="selectVote(this,'Kempen budaya dan perpaduan')">🎨 Kempen budaya dan perpaduan</button>
+    <button class="option vote-option" onclick="selectVote(this,'Semakan fakta sebelum berkongsi')">🔎 Semakan fakta sebelum berkongsi</button>
+    <button class="option vote-option" onclick="selectVote(this,'Projek digital bersama komuniti')">🤝 Projek digital bersama komuniti</button>
+
+    <p id="voteMessage" aria-live="polite"></p>
+    <button class="btn primary" onclick="submitVote()">Hantar pilihan</button>
+    <p class="small">Ini demo undian dalam pelayar. Untuk mengumpulkan respons sebenar daripada audiens, gunakan borang dalam talian.</p>
+  </div>
+
+  <div class="card" style="margin-top:22px">
+    <h2>💬 Maklum balas audiens</h2>
+    <label for="comment">Apakah satu perkara yang anda pelajari?</label>
+    <textarea id="comment" rows="4" placeholder="Tulis pandangan atau cadangan anda..."></textarea>
+    <button class="btn primary" onclick="submitFeedback()">Hantar maklum balas</button>
+    <p id="commentMessage" aria-live="polite"></p>
+  </div>
+
+  <h2 style="margin-top:40px">📚 Sumber rujukan</h2>
+  <div class="grid two">
+    <article class="card">
+      <h3>Jabatan Perangkaan Malaysia</h3>
+      <p>Rujuk laporan statistik penggunaan ICT dan akses Internet.</p>
+      <a href="https://www.dosm.gov.my/" target="_blank" rel="noopener">Laman rasmi DOSM ↗</a>
+    </article>
+    <article class="card">
+      <h3>Suruhanjaya Komunikasi dan Multimedia Malaysia</h3>
+      <p>Rujuk penerbitan berkaitan Internet dan komunikasi digital.</p>
+      <a href="https://www.mcmc.gov.my/" target="_blank" rel="noopener">Laman rasmi MCMC ↗</a>
+    </article>
+    <article class="card">
+      <h3>Kementerian Perpaduan Negara</h3>
+      <p>Rujukan berkaitan perpaduan nasional dan keharmonian masyarakat.</p>
+      <a href="https://www.perpaduan.gov.my/" target="_blank" rel="noopener">Laman rasmi KPN ↗</a>
+    </article>
+    <article class="card">
+      <h3>Portal Rasmi Kerajaan Malaysia</h3>
+      <p>Maklumat dasar dan inisiatif kerajaan.</p>
+      <a href="https://www.malaysia.gov.my/" target="_blank" rel="noopener">Buka portal ↗</a>
+    </article>
+  </div>
+
+  <div class="notice">
+    <strong>📌 Ingat:</strong> Semak laporan asal dan tahun penerbitan sebelum menggunakan angka statistik dalam pembentangan.
+  </div>
+
+  <a class="btn secondary" href="kuiz.html">← Kembali ke kuiz</a>
+  <a class="btn primary" href="index.html">Kembali ke laman utama 🏠</a>
+</main>
+
+<footer>MISI DIGITAL MALAYSIA | KPPB</footer>
+<script src="script.js"></script>
+</body>
+</html>
